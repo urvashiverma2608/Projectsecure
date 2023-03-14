@@ -1,0 +1,72 @@
+<html>
+<head> HTML 
+<style>
+#para1 {
+  text-align: center;
+  color: red;
+}
+.intro {
+  background-color: yellow;
+}
+</style>
+</head>
+<title> My first HTML page </title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+<?php
+ECHO "Hello!<br>";
+echo "Welcome to Developer News<br>";
+EcHo "Enjoy all of the ad-free articles<br>";
+?>
+<p id="para1">Hello World!</p>
+<p>This paragraph is not affected by the style.</p>
+<p> URVASHI VERMA </p>
+<b><u><i> UK </i></u></b>
+<strike> USA </strike>
+<h1>Demo of the .class selector</h1>
+function getTime(): number {
+  return new Date().getTime();
+}
+
+console.log(getTime());
+
+<div class="intro">
+  <p>My name is Donald.</p>
+  <p>I live in Duckburg.</p>
+</div>
+
+<p>My best friend is Mickey.</p>
+
+<p class="intro">My best friend is Mickey.</p>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Urvashi"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Verma"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"></img>
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+<script>
+var xArray = [50,60,70,80,90,100,110,120,130,140,150];
+var yArray = [7,8,8,9,9,9,10,11,14,14,15];
+
+// Define Data
+var data = [{
+  x:xArray,
+  y:yArray,
+  mode:"markers"
+}];
+
+// Define Layout
+var layout = {
+  xaxis: {range: [40, 160], title: "Square Meters"},
+  yaxis: {range: [5, 16], title: "Price in Millions"},  
+  title: "House Prices vs. Size"
+};
+
+// Display using Plotly
+Plotly.newPlot("myPlot", data, layout);
+</script>
+</body>
+</html>
